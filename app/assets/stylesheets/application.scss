@@ -1,20 +1,22 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
+ * This is a manifest file that'll be compiled into application.css, which will
+ * include all the files listed below.
+ * 
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets,
+ * vendor/assets/stylesheets, or any plugin's vendor/assets/stylesheets
+ * directory can be referenced here using a relative path.
+ * 
+ * You're free to add application-wide styles to this file and they'll appear
+ * at the bottom of the compiled file so the styles you add here take
+ * precedence over styles defined in any other CSS/SCSS files in this
+ * directory. Styles in this file should be added after the last require_*
+ * statement. It is generally better to create a new file per style scope.
+ * 
  *= require_tree .
  *= require_self
  */
 
-body, body > p, body > ol, body > ul, body > td { margin: 8px !important }
+body, body > p, body > ol, body > ul, body > td {margin: 8px !important}
 
 #banner {
   position: relative;
@@ -28,7 +30,7 @@ body, body > p, body > ol, body > ul, body > td { margin: 8px !important }
 
   img {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 192px;
   }
@@ -57,29 +59,28 @@ body, body > p, body > ol, body > ul, body > td { margin: 8px !important }
     flex: 1;
   }
 
+//
   #side {
     padding: 1em 2em;
     background: #141;
-
     form, div {
       display: inline;
-    }
-
+    }  
+ 
     input {
       font-size: small;
     }
 
     #cart {
       font-size: smaller;
-      color: white;
+      color:     white;
 
       table {
-        border-top: 1px dotted #595;
+        border-top:    1px dotted #595;
         border-bottom: 1px dotted #595;
         margin-bottom: 10px;
       }
     }
-
     ul {
       padding: 0;
 
@@ -93,8 +94,26 @@ body, body > p, body > ol, body > ul, body > td { margin: 8px !important }
       }
     }
   }
+//
 }
 
+@media all and (max-width: 800px) {
+  #columns {
+    flex-direction: column-reverse;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #banner {
+    height: 1em;
+  }
+
+  #banner .title {
+    display: none;
+  }
+}
+
+//
 .depot_form {
   fieldset {
     background: #efe;
@@ -134,24 +153,9 @@ body, body > p, body > ol, body > ul, body > td { margin: 8px !important }
     }
   }
 }
+//
 
 .locale {
   float: right;
   margin: -0.25em 0.1em;
-}
-
-@media all and (max-width: 800px) {
-  #columns {
-    flex-direction: column-reverse;
-  }
-}
-
-@media ll and (max-width: 500px) {
-  #banner {
-    height: 1em;
-  }
-
-  #banner .title {
-    display: none;
-  }
 }
